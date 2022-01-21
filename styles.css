@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dongle', sans-serif;
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+h1
+{
+    position: relative;
+    font-size: 4em;
+    color: #fff;
+    overflow: hidden;
+}
+
+h1::before
+{
+    content: '';
+    left: 120%;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+    animation: animateText 10s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animateText 
+{
+    0%
+    {
+        left: -20%;
+    }
+    50%
+    {
+        left: 120%;
+    }
+    100%
+    {
+        left: -20%;
+    }    
+}
